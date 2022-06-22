@@ -4,6 +4,8 @@ import WarningSign from './Components/WarningSign';
 import MyBadge from './Components/MyBadge';
 import SingleBook from './Components/SingleBook';
 import horrorArray from './Data/horror.json';
+import BookList from './Components/BookList';
+import { Row } from "react-bootstrap";
 
 function App() {
   return (
@@ -19,6 +21,11 @@ function App() {
       <div>
         <SingleBook book={horrorArray[0]} />
       </div>
+
+      <div>
+        <BookList books={horrorArray} />
+      </div>
+
     </div>
   );
 }

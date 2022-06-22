@@ -1,0 +1,24 @@
+import SingleBook from "./SingleBook";
+import { Container, Row, Col } from "react-bootstrap"
+
+
+const BookList = ({ books }) => {
+    return (
+
+        <Container>
+            <Row>
+                {
+                    books.slice(0, 12).map((currentBook) => (
+                        <Col>
+                            <SingleBook book={currentBook} />
+                        </Col>
+                    ))
+                }
+            </Row>
+        </Container>
+
+    )
+}
+
+
+export default BookList
