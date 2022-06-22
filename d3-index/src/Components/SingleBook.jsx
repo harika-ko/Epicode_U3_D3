@@ -10,9 +10,9 @@ class SingleBook extends Component {
 
     render() {
         return (
-
             <div className="single-book">
-                <Card key={this.props.book.asin}>
+                <Card onClick={() => this.setState({ selected: !this.state.selected })}
+                    key={this.props.book.asin} style={{ backgroundColor: this.state.selected ? "black" : "white" }}>
                     <Card.Img className="single-image" src={this.props.book.img} style={{ width: "250px" }} />
                     <Card.Body>
                         <Card.Title>{this.props.book.title}</Card.Title>
