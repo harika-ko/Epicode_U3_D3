@@ -9,7 +9,7 @@ const BookList = ({ books }) => {
             <Row>
                 {
                     books.slice(0, 12).map((currentBook) => (
-                        <Col>
+                        <Col key={currentBook.asin}>
                             <SingleBook book={currentBook} />
                         </Col>
                     ))

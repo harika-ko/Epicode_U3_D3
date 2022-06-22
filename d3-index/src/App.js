@@ -6,6 +6,7 @@ import SingleBook from './Components/SingleBook';
 import horrorArray from './Data/horror.json';
 import BookList from './Components/BookList';
 import { Row } from "react-bootstrap";
+import FilterBookList from './Components/FilterBookList';
 
 function App() {
   return (
@@ -22,8 +23,12 @@ function App() {
         <SingleBook book={horrorArray[0]} />
       </div>
 
-      <div>
+      {/* <div>
         <BookList books={horrorArray} />
+  </div>*/}
+
+      <div>
+        <FilterBookList book={horrorArray} />
       </div>
 
     </div>
